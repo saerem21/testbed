@@ -31,10 +31,10 @@
         CALayer *layer = self.view.layer;
         CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
         rotationAndPerspectiveTransform.m34 = 1.0 / 500;
-        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 0.0f, 1.0f, 0.0f);
+        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform,M_PI, 0.0f, 1.0f, 0.0f);
         layer.transform = rotationAndPerspectiveTransform;
     };
-    [UIView animateWithDuration:3.0
+    [UIView animateWithDuration:0.28
                           delay:0.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:animationsBlock
@@ -42,10 +42,69 @@
     
 }
 
-- (IBAction)filp:(id)sender {
+- (void) reverseCard {
+    //[self.flipTimer invalidate];
+    if (self.flipped){
+        return;
+    }
     
-    [self flipCard];
+    id animationsBlock = ^{
+        self.back.alpha = 0.0f;
+        self.front.alpha = 1.0f;
+        [self.view bringSubviewToFront:self.front];
+        self.flipped = YES;
+        
+        CALayer *layer = self.view.layer;
+        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
+        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform,-M_PI, 0.0f, -1.0f, 0.0f);
+        layer.transform = rotationAndPerspectiveTransform;
+    };
+    [UIView animateWithDuration:0.28
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:animationsBlock
+                     completion:nil];
+    
+    
+    
+    
 }
+
+-(void)cardTest{
+    [UIView transitionWithView:self.view
+                      duration:1.0
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    animations: ^{
+                        [self.front removeFromSuperview];
+                        [self.view addSubview:self.back];
+                    }
+                    completion:NULL];
+}
+
+-(void)cardRTest{
+    [UIView transitionWithView:self.view
+                      duration:1.0
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations: ^{
+                        [self.back removeFromSuperview];
+                        [self.view addSubview:self.front];
+                    }
+                    completion:NULL];
+}
+
+
+- (IBAction)reverse:(id)sender {
+    [self cardRTest];
+    //[self reverseCard];
+    NSLog(@"11");
+
+}
+
+- (IBAction)filp:(id)sender {
+    [self cardTest];
+    //[self flipCard];
+     }
 
 - (void)viewDidLoad
 {

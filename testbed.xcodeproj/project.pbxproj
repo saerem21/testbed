@@ -21,6 +21,8 @@
 		00C3BB731888DB240096708D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C3BB551888DB240096708D /* UIKit.framework */; };
 		00C3BB7B1888DB240096708D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00C3BB791888DB240096708D /* InfoPlist.strings */; };
 		00C3BB7D1888DB240096708D /* testbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB7C1888DB240096708D /* testbedTests.m */; };
+		00C3BB881888DB760096708D /* WLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB871888DB760096708D /* WLCard.m */; };
+		00C3BB8B1888DF1E0096708D /* filpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB8A1888DF1E0096708D /* filpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		00C3BB781888DB240096708D /* testbedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testbedTests-Info.plist"; sourceTree = "<group>"; };
 		00C3BB7A1888DB240096708D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00C3BB7C1888DB240096708D /* testbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testbedTests.m; sourceTree = "<group>"; };
+		00C3BB861888DB760096708D /* WLCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCard.h; sourceTree = "<group>"; };
+		00C3BB871888DB760096708D /* WLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCard.m; sourceTree = "<group>"; };
+		00C3BB891888DF1E0096708D /* filpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filpViewController.h; sourceTree = "<group>"; };
+		00C3BB8A1888DF1E0096708D /* filpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = filpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 		00C3BB451888DB240096708D = {
 			isa = PBXGroup;
 			children = (
+				00C3BB891888DF1E0096708D /* filpViewController.h */,
+				00C3BB8A1888DF1E0096708D /* filpViewController.m */,
+				00C3BB861888DB760096708D /* WLCard.h */,
+				00C3BB871888DB760096708D /* WLCard.m */,
 				00C3BB571888DB240096708D /* testbed */,
 				00C3BB761888DB240096708D /* testbedTests */,
 				00C3BB501888DB240096708D /* Frameworks */,
@@ -249,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C3BB881888DB760096708D /* WLCard.m in Sources */,
 				00C3BB681888DB240096708D /* ViewController.m in Sources */,
+				00C3BB8B1888DF1E0096708D /* filpViewController.m in Sources */,
 				00C3BB621888DB240096708D /* AppDelegate.m in Sources */,
 				00C3BB5E1888DB240096708D /* main.m in Sources */,
 			);

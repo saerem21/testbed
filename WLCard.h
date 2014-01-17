@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WLCard.h
 //  testbed
 //
 //  Created by SDT-1 on 2014. 1. 17..
@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WLCard : UIView
+
 
 @property  BOOL flipped;
+
+
 @property (strong,nonatomic)UIView *frontView;
 @property (strong,nonatomic)UIView *backView;
 - (void) flipCard;

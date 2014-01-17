@@ -1,33 +1,20 @@
 //
-//  ViewController.m
+//  filpViewController.m
 //  testbed
 //
 //  Created by SDT-1 on 2014. 1. 17..
 //  Copyright (c) 2014년 SDT-1. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "filpViewController.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *back;
+@interface filpViewController ()
 @property (weak, nonatomic) IBOutlet UIView *front;
+@property (weak, nonatomic) IBOutlet UIView *back;
 
 @end
 
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    
-    
-    
-    
-}
-
+@implementation filpViewController
 
 - (void) flipCard {
     //[self.flipTimer invalidate];
@@ -55,8 +42,15 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    //[self flipCard];
+- (IBAction)filp:(id)sender {
+    
+    [self flipCard];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

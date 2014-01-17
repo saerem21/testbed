@@ -23,37 +23,26 @@
     
     
     
+    CATransformLayer *cardContainer = [CATransformLayer layer];
+    cardContainer.frame = CGRectMake(0, 200, 100, 100);
     
+    CALayer *cardFront  = [CALayer layer];
+    cardFront.frame     = cardContainer.bounds;
+    cardFront.zPosition = 2;   // Higher than the zPosition of the back of the card
+    cardFront.contents  = (id)[UIImage imageNamed:@"ball2.png"].CGImage;
+    [cardContainer addSublayer:cardFront];
     
+    CALayer *cardBack  = [CALayer layer];
+    cardBack.frame     = cardContainer.bounds;
+    cardBack.zPosition = 1;
+    cardBack.contents  = (id)[UIImage imageNamed:@"ball3.png"].CGImage; // You may need to mirror this image
+    [cardContainer addSublayer:cardBack];
     
+
 }
 
 
-- (void) flipCard {
-    //[self.flipTimer invalidate];
-    if (self.flipped){
-        return;
-    }
-    
-    id animationsBlock = ^{
-        self.back.alpha = 1.0f;
-        self.front.alpha = 0.0f;
-        [self.view bringSubviewToFront:self.front];
-        self.flipped = YES;
-        
-        CALayer *layer = self.view.layer;
-        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
-        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
-        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 0.0f, 1.0f, 0.0f);
-        layer.transform = rotationAndPerspectiveTransform;
-    };
-    [UIView animateWithDuration:3.0
-                          delay:0.0
-                        options: UIViewAnimationCurveEaseInOut
-                     animations:animationsBlock
-                     completion:nil];
-    
-}
+
 
 -(void)viewDidAppear:(BOOL)animated{
     //[self flipCard];

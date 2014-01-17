@@ -23,6 +23,8 @@
 		00C3BB7D1888DB240096708D /* testbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB7C1888DB240096708D /* testbedTests.m */; };
 		00C3BB881888DB760096708D /* WLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB871888DB760096708D /* WLCard.m */; };
 		00C3BB8B1888DF1E0096708D /* filpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3BB8A1888DF1E0096708D /* filpViewController.m */; };
+		00C3BB8E1888E7FC0096708D /* ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C3BB8C1888E7FC0096708D /* ball2.png */; };
+		00C3BB8F1888E7FC0096708D /* ball3.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C3BB8D1888E7FC0096708D /* ball3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		00C3BB871888DB760096708D /* WLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCard.m; sourceTree = "<group>"; };
 		00C3BB891888DF1E0096708D /* filpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filpViewController.h; sourceTree = "<group>"; };
 		00C3BB8A1888DF1E0096708D /* filpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = filpViewController.m; sourceTree = "<group>"; };
+		00C3BB8C1888E7FC0096708D /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
+		00C3BB8D1888E7FC0096708D /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 		00C3BB581888DB240096708D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00C3BB8C1888E7FC0096708D /* ball2.png */,
+				00C3BB8D1888E7FC0096708D /* ball3.png */,
 				00C3BB591888DB240096708D /* testbed-Info.plist */,
 				00C3BB5A1888DB240096708D /* InfoPlist.strings */,
 				00C3BB5D1888DB240096708D /* main.m */,
@@ -239,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C3BB6A1888DB240096708D /* Images.xcassets in Resources */,
+				00C3BB8E1888E7FC0096708D /* ball2.png in Resources */,
+				00C3BB8F1888E7FC0096708D /* ball3.png in Resources */,
 				00C3BB5C1888DB240096708D /* InfoPlist.strings in Resources */,
 				00C3BB651888DB240096708D /* Main.storyboard in Resources */,
 			);

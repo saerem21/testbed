@@ -42,6 +42,32 @@
     
 }
 
+- (void) reverseCard {
+    //[self.flipTimer invalidate];
+    if (!self.flipped){
+        return;
+    }
+    
+    id animationsBlock = ^{
+        self.front.alpha = 1.0f;
+        self.back.alpha = 0.0f;
+        [self.view bringSubviewToFront:self.back];
+        self.flipped = NO;
+        
+        CALayer *layer = self.view.layer;
+        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
+        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform,0, 0.0f, 1.0f, 0.0f);
+        layer.transform = rotationAndPerspectiveTransform;
+    };
+    [UIView animateWithDuration:0.28
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:animationsBlock
+                     completion:nil];
+    
+}
+
 
 -(void)cardTest{
     [UIView transitionWithView:self.view
@@ -52,6 +78,7 @@
                         [self.view addSubview:self.back];
                     }
                     completion:NULL];
+    NSLog(@"%@",self.front);
 }
 
 -(void)cardRTest{
@@ -67,15 +94,15 @@
 
 
 - (IBAction)reverse:(id)sender {
-    [self cardRTest];
-    //[self reverseCard];
-    NSLog(@"11");
+    //[self cardRTest];
+    [self reverseCard];
+  
 
 }
 
 - (IBAction)filp:(id)sender {
-    [self cardTest];
-    //[self flipCard];
+    //[self cardTest];
+    [self flipCard];
      }
 
 - (void)viewDidLoad

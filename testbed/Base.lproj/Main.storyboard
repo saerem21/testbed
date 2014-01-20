@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-B8-nyC">
-                                <rect key="frame" x="51" y="14" width="214" height="232"/>
+                                <rect key="frame" x="53" y="14" width="214" height="511"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -40,11 +40,11 @@
                         <viewControllerLayoutGuide type="bottom" id="JAa-IZ-mNI"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b3e-K4-wqI">
-                        <rect key="frame" x="0.0" y="0.0" width="214" height="232"/>
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="511"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-aV-ZF0">
-                                <rect key="frame" x="0.0" y="0.0" width="214" height="232"/>
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="511"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-fs-8k5">
@@ -61,7 +61,7 @@
                                 <color key="backgroundColor" red="1" green="0.98538644870000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O8J-Ch-Ywl">
-                                <rect key="frame" x="0.0" y="0.0" width="214" height="232"/>
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="511"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLq-Lj-tk7">
